@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',cursive;
+}
+body
+{
+    min-height: 100vh;
+    background: #0c192c;
+}
+.bg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.image    
+        {   
+            justify-content: center;
+            align-items: center;
+            background-image: url(../nindi.jpg); /* Here choose your photo */
+            width: 60%;  /* Adjust your width of the image*/
+            height: 100%;   /* Adjust your  height of the image*/
+            background-repeat: no-repeat ;
+            background-position: center;
+            margin: 0 auto;
+            overflow: hidden;
+            background-size:  60% 100%;
+            -webkit-background-clip:text;
+            background-attachment: fixed;
+            -webkit-text-fill-color: rgba(255, 9, 9, 0);
+            font-size: 1em;
+            animation: fade-out 4s linear alternate;
+        }
+.image p
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* animation: fade-out 4s alternate; */
+} 
+.star
+{
+    position: absolute;
+    display: grid;
+    width: 20%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto ;
+    column-gap: 1px;
+    row-gap: 10px;
+    font-size: 7px;
+    margin-left: auto;
+
+}
+.star span
+{
+    font-size: 2em;
+    color: #4fc3dc;
+    text-shadow:0 0 10px #d1fbfb,
+    0 0 30px #73d7ec,
+    0 0 100px #4fc3dc;
+    animation: fadeinout 12s infinite;
+    animation-duration: calc(250s / var(--i));
+}
+.star span:nth-child(14n)
+{
+    text-shadow: 0 0 10px #f36565,
+    0 0 30px #ff2d75,
+    0 0 100px #ff2d75; 
+    color: #ff2d75;
+}
+.star2
+{
+    display: grid;
+    position: flex;
+    width: 20%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto ;
+    column-gap: 1px;
+    row-gap: 10px;
+    font-size: 7px;
+    margin-left: auto;
+}
+.star2 span
+{
+    margin-left: auto;
+    font-size: 2em;
+    text-shadow: 0 0 10px #f36565,
+    0 0 30px #ff2d75,
+    0 0 100px #ff2d75; 
+    color: #ff2d75;
+    animation: fadeinout 12s infinite;
+    animation-duration: calc(250s / var(--i));
+
+}
+.star2 span:nth-child(14n)
+{
+    color: #4fc3dc;
+    text-shadow:0 0 10px #d1fbfb,
+    0 0 30px #73d7ec,
+    0 0 100px #4fc3dc;
+}
+.bubbles
+{
+    position: absolute;
+    top: auto;
+    display: flex;
+}
+.bubbles span
+{
+    position: relative;
+    color: #4fc3dc;
+    font-size: 5em;
+    text-shadow:0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    margin: 0 4px;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(75s / var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    text-shadow: 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75; 
+    color: #ff2d75;
+}
+.greetings{
+    font-size: 6rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #aa1567, 0 0 50px #aa1567, 0 0 100px #39c6d6;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    
+    .button a{
+        font-size: .5rem;
+    }
+}
+@keyframes fadeinout {
+    0%,20%,40%,60%,80%,100%
+    {
+        opacity: 0;
+    }
+    10%,30%,50%,70%,90%
+    {
+        opacity: 1;
+    }
+}
+@keyframes fade-out
+{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+@keyframes animate 
+{
+    0%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+    100%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+}
