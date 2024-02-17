@@ -41,6 +41,16 @@ body
     font-family: Georgia, 'Times New Roman', Times, serif;
     /* animation: fade-out 4s alternate; */
 } 
+@media (min-width: 320px) and (max-width: 767px)
+{
+    .image p
+    {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        overflow: hidden;
+        height: 660px;
+        width: 100%;
+    }
+}
 .star
 {
     position: absolute;
