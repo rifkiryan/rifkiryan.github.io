@@ -8,8 +8,9 @@
 }
 body
 {
-    min-height: 100vh;
+    height: 100%;
     background: #0c192c;
+    overflow: hidden;
 }
 .bg
 {
@@ -39,6 +40,9 @@ body
 .image p
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
     /* animation: fade-out 4s alternate; */
 } 
 @media (min-width: 320px) and (max-width: 767px)
@@ -47,7 +51,7 @@ body
     {
         font-family: Georgia, 'Times New Roman', Times, serif;
         overflow: hidden;
-        height: 1080px;
+        height: 100%;
         width: 100%;
     }
 }
