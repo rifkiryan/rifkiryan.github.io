@@ -38,7 +38,7 @@ body {
   align-items: center;
   font-family: "Great Vibes", cursive;
   font-weight: 400;
-  font-size: 4em;
+  font-size: clamp(27px, 6vw, 80px);
   animation: smoke 5s linear alternate;
 }
 .surat:hover h1 span 
